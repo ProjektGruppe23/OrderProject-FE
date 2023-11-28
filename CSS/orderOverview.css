@@ -1,0 +1,52 @@
+/* ----------------- */
+/* General styles */
+/* ----------------- */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F0F2F4;
+    margin: 5%;
+    padding: 0;
+}
+
+/* ----------------- */
+/* Table styles */
+/* ----------------- */
+
+#tableContainer {
+    max-height: 100vh;
+    overflow: auto;
+}
+
+#orderTable {
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#orderTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    margin: 1%;
+}
+
+#orderTable th,
+#orderTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+#orderTable tr {
+    border-bottom: 1px solid #dddddd;
+    margin: 1%;
+}
+
+#orderTable tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#orderTable tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}

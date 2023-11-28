@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../CSS/orderOverview.css">
 </head>
 <body>
 <table id="orderTable">
+    <thead class="table-headers">
+    <tr>
+        <th>Order ID</th>
+        <th>API ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Customer Address ID</th>
+        <th>Vendor ID</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="tableContent">
+    <!-- Rows will be added here dynamically -->
+    </tbody>
 </table>
+
+<script src="../JS/orderOverview.js"></script>
 </body>
 </html>

@@ -1,10 +1,21 @@
-import {fetchAnyUrl} from "./modules/fetchAnyUrl.js";
+const url = 'http://localhost:8080/getorders';
+
+async function fetchAnyUrl(url)
+{
+    const response = await fetch(url);
+    if (!response.ok)
+    {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+}
 
 async function fetchOrders()
 {
     try
     {
-        return await fetchAnyUrl("http://localhost:8080/getorders");
+        console.log("fetching url:" + url)
+        return await fetchAnyUrl(url);
     }
     catch (error)
     {
@@ -13,21 +24,40 @@ async function fetchOrders()
     }
 }
 
-function populateTable(orders) {
-    const table = document.getElementById('orderTable');
-    orders.forEach((order) => {
-        const row = table.insertRow();
+function populateTable(orders)
+{
+    const tableContent = document.getElementById('tableContent');
+    tableContent.innerHTML = ''; // Clear existing content
+    orders.forEach((order) =>
+    {
+        const row = tableContent.insertRow();
 
-        const titleCell = row.insertCell();
-        titleCell.textContent = order.title;
+        const orderIdCell = row.insertCell();
+        orderIdCell.textContent = order.orderId;
 
-        const idCell = row.insertCell();
-        idCell.textContent = order.id;
+        const orderApiIdCell = row.insertCell();
+        orderApiIdCell.textContent = order.orderApiId;
 
-        const startDateCell = row.insertCell();
-        startDateCell.textContent = order.startDate;
+        const productNameCell = row.insertCell();
+        productNameCell.textContent = order.productName;
 
-        const endDateCell = row.insertCell();
-        endDateCell.textContent = order.endDate;
+        const priceCell = row.insertCell();
+        priceCell.textContent = order.price;
+
+        const quantityCell = row.insertCell();
+        quantityCell.textContent = order.quantity;
+
+        const customerAddressCell = row.insertCell();
+        customerAddressCell.textContent = order.costumerAddress ? order.costumerAddress.costumerAddressId : '';
+
+        const vendorCell = row.insertCell();
+        vendorCell.textContent = order.vendor ? order.vendor.vendorId : '';
     });
 }
+
+document.addEventListener('DOMContentLoaded', async () =>
+{
+    const orders = await fetchOrders();
+    populateTable(orders);
+    console.log(orders);
+});
