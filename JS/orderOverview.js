@@ -1,4 +1,5 @@
-const url = 'http://localhost:8080/getorders';
+const url1 = 'http://localhost:8080/getorders';
+const url2 = 'http://localhost:8080/getordersshopify';
 
 async function fetchAnyUrl(url)
 {
@@ -10,16 +11,30 @@ async function fetchAnyUrl(url)
     return await response.json();
 }
 
-async function fetchOrders()
+async function fetchOrdersReverb()
 {
     try
     {
-        console.log("fetching url:" + url)
-        return await fetchAnyUrl(url);
+        console.log("fetching url:" + url1)
+        return await fetchAnyUrl(url1);
     }
     catch (error)
     {
-        console.error('Error fetching movies:', error);
+        console.error('Error fetching orders:', error);
+        return [];
+    }
+}
+
+async function fetchOrdersShopify()
+{
+    try
+    {
+        console.log("fetching url:" + url2)
+        return await fetchAnyUrl(url2);
+    }
+    catch (error)
+    {
+        console.error('Error fetching orders:', error);
         return [];
     }
 }
@@ -57,7 +72,10 @@ function populateTable(orders)
 
 document.addEventListener('DOMContentLoaded', async () =>
 {
-    const orders = await fetchOrders();
-    populateTable(orders);
-    console.log(orders);
+    //const reverbOrders = await fetchOrdersReverb();
+    const shopifyOrders = await fetchOrdersShopify();
+    //populateTable(reverbOrders);
+    populateTable(shopifyOrders);
+    //console.log(reverbOrders);
+    console.log(shopifyOrders);
 });
