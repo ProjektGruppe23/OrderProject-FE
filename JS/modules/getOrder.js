@@ -1,26 +1,25 @@
-export function getMovie()
-{
-    const ageLimitId = document.getElementById("inpAgeLimitId").value;
-    const title = document.getElementById("inpTitle").value;
-    const description = document.getElementById("inpDescription").value;
-    const startDate = document.getElementById("inpStartDate").value;
-    const endDate = document.getElementById("inpEndDate").value;
-    const length = document.getElementById("inpLength").value;
-    const picture = document.getElementById("inpPicture").value;
+export function getOrder() {
+    const orderApiId = document.getElementById("inpOrderApiId").value;
+    const productName = document.getElementById("inpProductName").value;
+    const price = document.getElementById("inpPrice").value;
+    const quantity = document.getElementById("inpQuantity").value;
+    const costumerAddressId = document.getElementById("inpCostumerAddressId").value;
+    const vendorId = document.getElementById("inpVendorId").value;
 
-    // Construct the movie object
-    const movie = {
-        ageLimit: {
-            id: ageLimitId // Nested as requested
+    // Construct the order object
+    const order = {
+        orderApiId: orderApiId,
+        productName: productName,
+        price: price, //parseFloat(price) hvis du vil være sikker på at det er et tal
+        quantity: quantity, //parseInt(quantity) hvis du vil være sikker på at det er et tal
+        costumerAddress: {
+            costumerAddressId: costumerAddressId
         },
-        endDate: endDate,
-        length: length,
-        startDate: startDate,
-        title: title,
-        description: description,
-        picture: picture
+        vendor: {
+            vendorId: vendorId
+        }
     };
 
-    console.log(movie);
-    return movie;
+    console.log(order);
+    return order;
 }
