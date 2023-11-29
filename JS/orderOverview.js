@@ -1,5 +1,4 @@
-const url1 = 'http://localhost:8080/getorders';
-const url2 = 'http://localhost:8080/getordersshopify';
+const url3= 'http://localhost:8080/getordersfromdb';
 
 async function fetchAnyUrl(url)
 {
@@ -11,7 +10,24 @@ async function fetchAnyUrl(url)
     return await response.json();
 }
 
-async function fetchOrdersReverb()
+async function fetchOrdersForBackend()
+{
+    try
+    {
+        const url1 = 'http://localhost:8080/getorders';
+        const url2 = 'http://localhost:8080/getordersshopify';
+        console.log("fetching url:" + url1)
+        console.log("fetching url:" + url2)
+        return await fetchAnyUrl(url1, url2);
+    }
+    catch (error)
+    {
+        console.error('Error fetching orders:', error);
+        return [];
+    }
+}
+
+/*async function fetchOrdersReverb()
 {
     try
     {
@@ -37,7 +53,7 @@ async function fetchOrdersShopify()
         console.error('Error fetching orders:', error);
         return [];
     }
-}
+}*/
 
 function populateTable(orders)
 {
@@ -72,10 +88,8 @@ function populateTable(orders)
 
 document.addEventListener('DOMContentLoaded', async () =>
 {
-    //const reverbOrders = await fetchOrdersReverb();
-    const shopifyOrders = await fetchOrdersShopify();
-    //populateTable(reverbOrders);
-    populateTable(shopifyOrders);
-    //console.log(reverbOrders);
-    console.log(shopifyOrders);
+    await fetchOrdersForBackend();
+    const dbOrders = await fetchAnyUrl(url3);
+    populateTable(dbOrders);
+    console.log(dbOrders);
 });
