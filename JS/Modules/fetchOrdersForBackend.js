@@ -8,6 +8,7 @@ export async function fetchOrdersForBackend()
         const url2 = 'http://localhost:8080/getordersshopify';
         console.log("fetching url:" + url1)
         console.log("fetching url:" + url2)
+        alert("Orders are being processed, please wait...");
         return await fetchAnyUrl(url1, url2);
     }
     catch (error)

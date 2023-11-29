@@ -4,9 +4,24 @@ import { populateTable } from './modules/populateOrderTable.js';
 
 const url3= 'http://localhost:8080/getordersfromdb';
 
+const addOrdersButton = document.getElementById("addOrdersButton");
+
+addOrdersButton.addEventListener("click", async () => {
+    try {
+        await fetchOrdersForBackend();
+        if(confirm("Orders added successfully! Do you want to refresh the page?"))
+        {
+            window.location.reload();
+        }
+
+        window.location.reload();
+    } catch (error) {
+        console.error("Error fetching orders:", error);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', async () =>
 {
-    //await fetchOrdersForBackend(); kalder backend data til databasen men gør det hver gang man kører front end...
     const dbOrders = await fetchAnyUrl(url3);
     console.log(dbOrders);
     populateTable(dbOrders);
