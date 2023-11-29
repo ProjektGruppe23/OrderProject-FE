@@ -27,34 +27,6 @@ async function fetchOrdersForBackend()
     }
 }
 
-/*async function fetchOrdersReverb()
-{
-    try
-    {
-        console.log("fetching url:" + url1)
-        return await fetchAnyUrl(url1);
-    }
-    catch (error)
-    {
-        console.error('Error fetching orders:', error);
-        return [];
-    }
-}
-
-async function fetchOrdersShopify()
-{
-    try
-    {
-        console.log("fetching url:" + url2)
-        return await fetchAnyUrl(url2);
-    }
-    catch (error)
-    {
-        console.error('Error fetching orders:', error);
-        return [];
-    }
-}*/
-
 function populateTable(orders)
 {
     const tableContent = document.getElementById('tableContent');
