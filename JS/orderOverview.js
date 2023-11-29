@@ -1,31 +1,7 @@
+import { fetchAnyUrl } from './modules/fetchAnyUrl.js';
+import { fetchOrdersForBackend } from './modules/fetchOrdersForBackend.js';
+
 const url3= 'http://localhost:8080/getordersfromdb';
-
-async function fetchAnyUrl(url)
-{
-    const response = await fetch(url);
-    if (!response.ok)
-    {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return await response.json();
-}
-
-async function fetchOrdersForBackend()
-{
-    try
-    {
-        const url1 = 'http://localhost:8080/getorders';
-        const url2 = 'http://localhost:8080/getordersshopify';
-        console.log("fetching url:" + url1)
-        console.log("fetching url:" + url2)
-        return await fetchAnyUrl(url1, url2);
-    }
-    catch (error)
-    {
-        console.error('Error fetching orders:', error);
-        return [];
-    }
-}
 
 function populateTable(orders)
 {
