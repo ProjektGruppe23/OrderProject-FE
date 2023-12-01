@@ -13,7 +13,7 @@ export async function deleteOrder(orderIdToDelete)
             const response = await sendObjectAsJson(url, null, "DELETE");
             if (response.status === 200)
             {
-                alert("Order deleted successfully");
+                alert("Order deleted and archived successfully");
             }
             else
             {
