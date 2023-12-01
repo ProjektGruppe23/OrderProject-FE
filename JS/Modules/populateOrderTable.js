@@ -27,7 +27,7 @@ export function populateTable(orders)
         customerAddressCell.textContent = order.costumerAddress ? order.costumerAddress.costumerAddressId : '';
 
         const vendorCell = row.insertCell();
-        vendorCell.textContent = order.vendor ? order.vendor.vendorId : '';
+        vendorCell.textContent = order.vendor ? order.vendor.vendorName : '';
 
         const actionCell = row.insertCell();
         const deleteButton = document.createElement('button');
