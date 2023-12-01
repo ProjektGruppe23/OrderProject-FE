@@ -11,19 +11,24 @@ export async function fetchOrdersForBackend() {
         const response1 = await fetch(url1);
         const response2 = await fetch(url2);
 
-        if (!response1.ok || !response2.ok) {
-            throw new Error('Failed to fetch orders');
+        if(response1.ok && response2.ok)
+        {
+            alert("Orders added successfully!");
+
+        }
+        else if (!response1.ok)
+        {
+            console.log('Failed to fetch orders from reverb');
+        }
+        else if (!response2.ok)
+        {
+            console.log('Failed to fetch orders from shopify');
         }
 
-        const data1 = await response1.json();
-        const data2 = await response2.json();
+        return [response1, response2];
 
-        // Combine or process data from both URLs as needed
-        const combinedData = [...data1, ...data2];
-
-        return combinedData;
     } catch (error) {
-        console.error('Error fetching orders:', error);
+        console.error('Error fetching orders: ', error);
         return [];
     }
 }
