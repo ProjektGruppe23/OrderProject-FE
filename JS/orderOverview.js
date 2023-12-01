@@ -9,11 +9,6 @@ const addOrdersButton = document.getElementById("addOrdersButton");
 addOrdersButton.addEventListener("click", async () => {
     try {
         await fetchOrdersForBackend();
-        if(confirm("Orders added successfully! Do you want to refresh the page?"))
-        {
-            window.location.reload();
-        }
-
         window.location.reload();
     } catch (error) {
         console.error("Error fetching orders:", error);

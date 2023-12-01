@@ -13,16 +13,18 @@ export async function fetchOrdersForBackend() {
 
         if(response1.ok && response2.ok)
         {
-            alert("Orders added successfully!");
-
+            console.log('Orders fetched successfully');
+            alert("Orders fetched successfully, the site will now reload to show the updated orderlist.");
         }
         else if (!response1.ok)
         {
             console.log('Failed to fetch orders from reverb');
+            alert("Failed to fetch orders from reverb");
         }
         else if (!response2.ok)
         {
             console.log('Failed to fetch orders from shopify');
+            alert("Failed to fetch orders from shopify");
         }
 
         return [response1, response2];
