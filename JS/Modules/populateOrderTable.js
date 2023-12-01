@@ -8,12 +8,6 @@ export function populateTable(orders)
     {
         const row = tableContent.insertRow();
 
-        const orderIdCell = row.insertCell();
-        orderIdCell.textContent = order.orderId;
-
-        const orderApiIdCell = row.insertCell();
-        orderApiIdCell.textContent = order.orderApiId;
-
         const productNameCell = row.insertCell();
         productNameCell.textContent = order.productName;
 
@@ -23,11 +17,8 @@ export function populateTable(orders)
         const quantityCell = row.insertCell();
         quantityCell.textContent = order.quantity;
 
-        const customerAddressCell = row.insertCell();
-        customerAddressCell.textContent = order.costumerAddress ? order.costumerAddress.costumerAddressId : '';
-
         const vendorCell = row.insertCell();
-        vendorCell.textContent = order.vendor ? order.vendor.vendorId : '';
+        vendorCell.textContent = order.vendor ? order.vendor.vendorName : '';
 
         const actionCell = row.insertCell();
         const deleteButton = document.createElement('button');
