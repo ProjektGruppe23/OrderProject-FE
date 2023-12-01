@@ -8,7 +8,7 @@ export async function deleteOrder(orderIdToDelete)
 
     try
     {
-        if (confirm("Are you sure you want to delete the order with id: " + orderIdToDelete + "?"))
+        if (confirm("Are you sure you want to delete the order with id: " + orderIdToDelete + " and move it to archive?"))
         {
             const response = await sendObjectAsJson(url, null, "DELETE");
             if (response.status === 200)
