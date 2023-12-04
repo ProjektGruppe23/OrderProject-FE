@@ -16,6 +16,9 @@ export function populateTable(orders)
         const shippingButton = document.createElement('button');
         shippingButton.textContent = 'Shipping';
         shippingButton.id = 'btnShipping';
+        shippingButton.addEventListener('click', () => {
+            window.location.href = `shippingOverview.html?orderId=${order.orderId}`;
+        });
         shippingCell.appendChild(shippingButton);
 
 
