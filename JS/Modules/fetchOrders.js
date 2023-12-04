@@ -1,7 +1,7 @@
-export async function fetchOrdersForBackend() {
+export async function fetchOrders(input1, input2) {
     try {
-        const url1 = 'http://localhost:8080/getorders';
-        const url2 = 'http://localhost:8080/getordersshopify';
+        const url1 = input1;
+        const url2 = input2;
 
         console.log("fetching url:" + url1);
         console.log("fetching url:" + url2);
@@ -19,7 +19,7 @@ export async function fetchOrdersForBackend() {
         else if (!response1.ok)
         {
             console.log('Failed to fetch orders from reverb');
-            alert("Failed to fetch orders from reverb");
+            alert("Failed to fetch orders from reverb" + response1.status);
         }
         else if (!response2.ok)
         {

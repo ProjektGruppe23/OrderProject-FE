@@ -4,6 +4,7 @@ export function populateTable(orders)
 {
     const tableContent = document.getElementById('tableContent');
     tableContent.innerHTML = ''; // Clear existing content
+
     orders.forEach((order) =>
     {
         const row = tableContent.insertRow();

@@ -1,14 +1,16 @@
 import { fetchAnyUrl } from './modules/fetchAnyUrl.js';
-import { fetchOrdersForBackend } from './modules/fetchOrdersForBackend.js';
-import { populateTable } from './modules/populateOrderTable.js';
+import { fetchOrders } from './modules/fetchOrders.js';
+import { populateTable } from './Modules/orderOverview/populateOrderTable.js';
 
+const url1= 'http://localhost:8080/getorders';
+const url2= 'http://localhost:8080/getordersshopify';
 const url3= 'http://localhost:8080/getordersfromdb';
 
 const addOrdersButton = document.getElementById("addOrdersButton");
 
 addOrdersButton.addEventListener("click", async () => {
     try {
-        await fetchOrdersForBackend();
+        await fetchOrders(url1, url2);
         window.location.reload();
     } catch (error) {
         console.error("Error fetching orders:", error);
