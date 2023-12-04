@@ -11,7 +11,6 @@ export function populateTable(orders)
         const productNameCell = row.insertCell();
         productNameCell.textContent = order.productName;
 
-
         const shippingCell = row.insertCell();
         const shippingButton = document.createElement('button');
         shippingButton.textContent = 'Shipping';
@@ -20,7 +19,6 @@ export function populateTable(orders)
             window.location.href = `shippingOverview.html?orderId=${order.orderId}`;
         });
         shippingCell.appendChild(shippingButton);
-
 
         const priceCell = row.insertCell();
         priceCell.textContent = order.price;
