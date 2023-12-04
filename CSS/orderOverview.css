@@ -52,7 +52,7 @@ body {
     border-bottom: 2px solid #009879;
 }
 
-#btnDeleteOrder {
+#btnDeleteOrder, #btnShipping {
     transition: transform 0.1s ease-in-out;
     background-color: #009879;
     border-radius: 5px;
@@ -104,3 +104,6 @@ body {
     cursor: pointer;
     border: 1px solid #009879;
 }
+
+
+

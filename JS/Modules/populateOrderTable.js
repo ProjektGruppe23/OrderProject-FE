@@ -11,6 +11,14 @@ export function populateTable(orders)
         const productNameCell = row.insertCell();
         productNameCell.textContent = order.productName;
 
+
+        const shippingCell = row.insertCell();
+        const shippingButton = document.createElement('button');
+        shippingButton.textContent = 'Shipping';
+        shippingButton.id = 'btnShipping';
+        shippingCell.appendChild(shippingButton);
+
+
         const priceCell = row.insertCell();
         priceCell.textContent = order.price;
 
