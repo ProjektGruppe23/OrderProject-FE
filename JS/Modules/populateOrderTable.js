@@ -8,6 +8,9 @@ export function populateTable(orders)
     {
         const row = tableContent.insertRow();
 
+        const dateCell = row.insertCell();
+        dateCell.textContent = order.date ? order.date.date : "";
+
         const productNameCell = row.insertCell();
         productNameCell.textContent = order.productName;
 
