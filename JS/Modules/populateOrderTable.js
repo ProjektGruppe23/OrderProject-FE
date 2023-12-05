@@ -60,15 +60,7 @@ export function populateTable(orders)
     });
 }
 
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        // Optional: Display a message or change the button appearance to indicate that the text has been copied
-        alert('Copied to clipboard: ' + text); // Simple alert; you might want to use a more subtle notification
-    }).catch(err => {
-        console.error('Failed to copy text to clipboard', err);
-        // Optional: Display an error message
-    });
-}
+
 
 async function fetchAndDisplayShippingDetails(orderId, dropdownElement) {
     try {
