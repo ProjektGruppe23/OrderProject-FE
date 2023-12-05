@@ -120,3 +120,18 @@ body {
     /* More styles for visible state */
 }
 
+
+.detail {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.detail span {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.copy-btn {
+    margin-right: 10px;
+}
+
