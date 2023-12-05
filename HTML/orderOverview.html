@@ -6,14 +6,27 @@
     <link rel="stylesheet" href="../CSS/orderOverview.css">
 </head>
 <body>
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            // Optional: Display a message or change the button appearance to indicate that the text has been copied
+            alert('Copied to clipboard: ' + text); // Simple alert; you might want to use a more subtle notification
+        }).catch(err => {
+            console.error('Failed to copy text to clipboard', err);
+            // Optional: Display an error message
+        });
+    }
+</script>
 <div>
     <button id="addOrdersButton" class="button">Add orders from API to database</button>
 </div>
+
 <table id="orderTable">
     <thead class="table-headers">
     <tr>
         <th>Date</th>
         <th>Product Name</th>
+        <th>Shipping</th>
         <th>Price</th>
         <th>Quantity</th>
         <th>Vendor</th>
@@ -24,6 +37,6 @@
     </tbody>
 </table>
 
-<script src="../JS/orderOverview.js" type="module"></script>
 </body>
+<script src="../JS/orderOverview.js" type="module"></script>
 </html>

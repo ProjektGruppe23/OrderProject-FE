@@ -52,7 +52,7 @@ body {
     border-bottom: 2px solid #009879;
 }
 
-#btnDeleteOrder {
+#btnDeleteOrder, #btnShipping {
     transition: transform 0.1s ease-in-out;
     background-color: #009879;
     border-radius: 5px;
@@ -104,3 +104,19 @@ body {
     cursor: pointer;
     border: 1px solid #009879;
 }
+
+.shipping-details-dropdown {
+    /* Styling for the dropdown */
+    display: none;
+    /* More styles as per your design */
+}
+
+.shipping-details-dropdown.hidden {
+    display: none;
+}
+
+.shipping-details-dropdown:not(.hidden) {
+    display: block;
+    /* More styles for visible state */
+}
+
