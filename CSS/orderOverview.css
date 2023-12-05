@@ -105,5 +105,18 @@ body {
     border: 1px solid #009879;
 }
 
+.shipping-details-dropdown {
+    /* Styling for the dropdown */
+    display: none;
+    /* More styles as per your design */
+}
 
+.shipping-details-dropdown.hidden {
+    display: none;
+}
+
+.shipping-details-dropdown:not(.hidden) {
+    display: block;
+    /* More styles for visible state */
+}
 
