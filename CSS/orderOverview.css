@@ -52,7 +52,7 @@ body {
     border-bottom: 2px solid #480457E8;
 }
 
-#btnDeleteOrder, #btnShipping, #copy-btn {
+#btnDeleteOrder, #btnShipping, .copy-btn {
     transition: transform 0.1s ease-in-out;
     background-color: #480457E8;
     border-radius: 5px;
@@ -63,7 +63,7 @@ body {
     margin: 1%;
 }
 
-#btnDeleteOrder:hover, #btnShipping:hover, #copy-btn:hover {
+#btnDeleteOrder:hover, #btnShipping:hover, .copy-btn:hover {
     background-color: #480457E8;
     transition: 0.1s ease-in-out;
     transform: scale(1.1);
