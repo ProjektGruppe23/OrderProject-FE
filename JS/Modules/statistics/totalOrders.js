@@ -1,16 +1,17 @@
-import {fetchOrders} from "../fetchOrders";
-
-const url1= 'http://localhost:8080/getordersfromdb';
-const url2= 'http://localhost:8080/getArchivedOrders';
+import { fetchAnalyticsData } from './fetchAnalyticsData.js';
 
 export async function totalOrders()
 {
-    const getAllData = await fetchOrders(url1, url2);
-    console.log(getAllData);
-    let totalOrders = 0;
-    for (let i = 0; i < getAllData.length; i++)
+    const url1 = "http://localhost:8080/getinfotoanalyze";
+
+    try
     {
-        totalOrders++;
+        const data = await fetchAnalyticsData();
+        return data.length; // Returns the number of items in the array
     }
-    return totalOrders;
+    catch (error)
+    {
+        console.error('Error fetching data:', error);
+        return null;
+    }
 }
