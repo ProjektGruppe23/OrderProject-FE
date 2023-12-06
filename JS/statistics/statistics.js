@@ -1,4 +1,4 @@
-import { totalOrders } from './modules/statistics/totalOrders.js';
+import { totalOrders } from './modules/totalOrders.js';
 
 
 document.addEventListener('DOMContentLoaded',

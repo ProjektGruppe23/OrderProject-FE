@@ -1,4 +1,4 @@
-import {sendObjectAsJson} from "../sendObjectAsJson.js";
+import {sendObjectAsJson} from "./sendObjectAsJson.js";
 
 export async function deleteOrder(orderIdToDelete)
 {
