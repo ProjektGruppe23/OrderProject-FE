@@ -6,7 +6,7 @@ export async function fetchOrders(input1, input2) {
         console.log("fetching url:" + url1);
         console.log("fetching url:" + url2);
 
-        alert("Orders are being processed, please wait...");
+        alert("Orders are being processed, please wait... Click OK to continue");
 
         const response1 = await fetch(url1);
         const response2 = await fetch(url2);
@@ -14,7 +14,7 @@ export async function fetchOrders(input1, input2) {
         if(response1.ok && response2.ok)
         {
             console.log('Orders fetched successfully');
-            alert("Orders fetched successfully, the site will now reload to show the updated orderlist.");
+            alert("Orders fetched successfully, the site will now reload to show the updated orderlist. Click OK to continue");
         }
         else if (!response1.ok)
         {
