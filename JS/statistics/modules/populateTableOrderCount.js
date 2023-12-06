@@ -1,8 +1,8 @@
-import {fetchAnalyticsData} from "./fetchAnalyticsData.js";
+import {analyticsData} from "./fetchAnalyticsData.js";
 
 export async function populateTable()
 {
-    const orders = await fetchAnalyticsData();
+    const orders = analyticsData;
     const details = {};  // Object to store count and income
 
     // Process each order

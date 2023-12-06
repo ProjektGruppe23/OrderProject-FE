@@ -1,4 +1,4 @@
-import {fetchAnalyticsData} from "./fetchAnalyticsData.js";
+import {analyticsData} from "./fetchAnalyticsData.js";
 
 function prepareDonutChartData(data)
 {
@@ -89,7 +89,6 @@ function renderDonutChart(data)
 
 export async function displayDonutChart()
 {
-    const rawData = await fetchAnalyticsData();
-    const donutChartData = prepareDonutChartData(rawData);
+    const donutChartData = prepareDonutChartData(analyticsData);
     renderDonutChart(donutChartData);
 }

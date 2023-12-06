@@ -2,7 +2,7 @@ import { totalOrders } from './modules/totalOrders.js';
 import { populateTable } from "./modules/populateTableOrderCount.js";
 import { displayBarChart } from "./modules/ordersByCountry.js"
 import { displayDonutChart } from "./modules/ordersByVendor.js"
-import {fetchAnalyticsData} from "./modules/fetchAnalyticsData";
+import {fetchAnalyticsData} from "./modules/fetchAnalyticsData.js";
 
 /*async function getAnalyticsData()
 {
@@ -12,8 +12,7 @@ import {fetchAnalyticsData} from "./modules/fetchAnalyticsData";
 document.addEventListener('DOMContentLoaded',
     async () =>
     {
-        //await fetchAnalyticsData();
-
+        await fetchAnalyticsData()
         const totalOrdersNumber = await totalOrders();
         console.log(totalOrdersNumber);
 

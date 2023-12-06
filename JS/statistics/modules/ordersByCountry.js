@@ -1,4 +1,4 @@
-import { fetchAnalyticsData } from "./fetchAnalyticsData.js";
+import { analyticsData } from "./fetchAnalyticsData.js";
 
 function prepareBarChartData(data) {
     const countries = new Set();
@@ -108,7 +108,6 @@ function renderBarChart(data) {
 }
 
 export async function displayBarChart() {
-    const rawData = await fetchAnalyticsData();
-    const chartData = prepareBarChartData(rawData);
+    const chartData = prepareBarChartData(analyticsData);
     renderBarChart(chartData);
 }
