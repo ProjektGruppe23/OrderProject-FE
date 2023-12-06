@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../CSS/statistics.css">
 </head>
 <body>
-<div id="products-container"></div>
+<div class="highlights">Total Orders</div>
+<div id="order-info">
+    <span id="totalOrdersText">Total Orders: </span><span id="total-orders-number"></span>
+</div>
+<div class="highlights">Orders Per Vender</div>
 <div>
+    <canvas id="vendorDonutChart"></canvas>
+</div>
+<div class="highlights">Orders Per Country</div>
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+<div class="highlights">Total Of Each Order</div>
+<div id="tableContainer">
     <table id="orderTable">
         <thead class="table-headers">
         <tr>
             <th>Product Name</th>
             <th>Occurrences</th>
             <th>Vendor</th>
+            <th>Income</th>
         </tr>
         </thead>
         <tbody id="tableContent">
@@ -20,6 +34,7 @@
     </table>
 </div>
 
-<script src="../JS/Modules/statistics/totalOrdersByOrderAndVendor.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../JS/statistics/statistics.js" type="module"></script>
 </body>
 </html>

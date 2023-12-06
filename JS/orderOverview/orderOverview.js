@@ -1,5 +1,5 @@
 import { fetchAnyUrl } from './modules/fetchAnyUrl.js';
-import { fetchOrders } from '../statistics/modules/fetchOrders.js';
+import { fetchOrders } from './modules/fetchOrders.js';
 import { populateTable } from './modules/populateOrderTable.js';
 
 const url1= 'http://localhost:8080/getorders';

@@ -1,0 +1,104 @@
+/* ----------------- */
+/* Table styles */
+/* ----------------- */
+
+#tableContainer {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    width: 80%; /* or 90%, as per your requirement */
+    margin: auto; /* This centers the container */
+}
+
+#orderTable {
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#orderTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    margin: 1%;
+}
+
+#orderTable th,
+#orderTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+#orderTable tr {
+    border-bottom: 1px solid #dddddd;
+    margin: 1%;
+}
+
+#orderTable tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#orderTable tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+/* ----------------- */
+/* Highlights styles */
+/* ----------------- */
+
+.highlights
+{
+    cursor: default;
+    background-color: #009879;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    font-size: 25px;
+    margin: 5% auto 5% auto;
+    display: block; /* Ensures it's a block-level element */
+    width: fit-content; /* Adjust width to content */
+}
+
+/* ----------------- */
+/* Total orders styles */
+/* ----------------- */
+
+#order-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+/* Total Orders Text Styling */
+#totalOrdersText {
+    font-size: 18px;
+}
+
+/* Total Orders Number Box Styling */
+#total-orders-number {
+    border: 2px solid #009879; /* Color can be adjusted */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f3f3f3; /* Background color */
+}
+
+/* ----------------- */
+/* Chart styles */
+/* ----------------- */
+
+/* Chart Styling */
+#myChart {
+    height: 550px; /* 90% of the viewport height */
+    width: auto;
+    margin: auto; /* Center the chart */
+}
+
+#vendorDonutChart {
+    height: 500px; /* 90% of the viewport height */
+    width: auto;
+    margin: auto; /* Center the chart */
+}
