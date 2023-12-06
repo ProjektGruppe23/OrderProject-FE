@@ -1,4 +1,7 @@
+import { copyToClipboard } from './copyToClipboard.js';
+window.copyToClipboard = copyToClipboard;
 import { deleteOrder } from "./deleteOrder.js";
+import { fetchAndDisplayShippingDetails } from "./fetchShippingDetails.js";
 
 export function populateTable(orders)
 {
@@ -9,8 +12,27 @@ export function populateTable(orders)
     {
         const row = tableContent.insertRow();
 
+        const dateCell = row.insertCell();
+        dateCell.textContent = order.date ? order.date.date : "";
+
         const productNameCell = row.insertCell();
         productNameCell.textContent = order.productName;
+
+        const shippingCell = row.insertCell();
+        const shippingButton = document.createElement('button');
+        shippingButton.textContent = 'Shipping';
+        shippingButton.id = 'btnShipping';
+        shippingButton.classList.add('btnShipping'); // use class instead of id for multiple elements
+        shippingCell.appendChild(shippingButton);
+
+        const shippingDetailsDropdown = document.createElement('div');
+        shippingDetailsDropdown.classList.add('shipping-details-dropdown', 'hidden');
+        shippingDetailsDropdown.id = `shippingDetails${order.orderId}`; // unique id for each dropdown
+        row.insertAdjacentElement('afterend', shippingDetailsDropdown); // insert the dropdown after the row
+
+        shippingButton.addEventListener('click', () => {
+            fetchAndDisplayShippingDetails(order.orderId, shippingDetailsDropdown);
+        });
 
         const priceCell = row.insertCell();
         priceCell.textContent = order.price;
@@ -35,3 +57,8 @@ export function populateTable(orders)
         actionCell.appendChild(deleteButton);
     });
 }
+
+
+
+
+
