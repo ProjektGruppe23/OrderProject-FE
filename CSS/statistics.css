@@ -18,8 +18,8 @@
 }
 
 #orderTable thead tr {
-    background-color: #009879;
-    color: #ffffff;
+    background-color: lightblue;
+    color: black;
     text-align: center;
     margin: 1%;
 }
@@ -51,7 +51,9 @@
 .highlights
 {
     cursor: default;
-    background-color: #009879;
+    background-color: darkblue;
+    opacity: 70%;
+    font-family: "Mongolian Baiti" ,serif;
     border-radius: 10px;
     color: #ffffff;
     border: none;
@@ -70,19 +72,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* Adjust the margin as needed */
-}
-
-/* Total Orders Text Styling */
-#totalOrdersText {
-    font-size: 18px;
+    margin: 20px 0;
 }
 
 /* Total Orders Number Box Styling */
 #total-orders-number {
-    border: 2px solid #009879; /* Color can be adjusted */
-    padding: 5px 10px;
-    border-radius: 5px;
+    border: 2px solid black;
+    color: darkred;
+    font-size: 75px;
+    padding: 5%;
+    border-radius: 5%;
     background-color: #f3f3f3; /* Background color */
 }
 
