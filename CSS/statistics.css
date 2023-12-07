@@ -101,3 +101,23 @@
     width: auto;
     margin: auto; /* Center the chart */
 }
+
+/* ----------------- */
+/* Return button styles */
+/* ----------------- */
+
+#return
+{
+    cursor: pointer;
+    background-color: darkblue;
+    opacity: 70%;
+    font-family: "Mongolian Baiti" ,serif;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    font-size: 30px;
+    margin: 5% auto 5% auto;
+    display: block; /* Ensures it's a block-level element */
+    width: fit-content; /* Adjust width to content */
+}
