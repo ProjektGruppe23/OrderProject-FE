@@ -70,7 +70,7 @@ function renderDonutChart(data)
                                 const priceValue = context.raw; // Get the raw value for price
                                 if (priceValue !== undefined && priceValue !== null)
                                 {
-                                    label += '$' + priceValue.toFixed(2); // Format as a currency with two decimal places
+                                    label += '€' + priceValue.toFixed(2); // Format as a currency with two decimal places
                                 }
                             }
                             else
