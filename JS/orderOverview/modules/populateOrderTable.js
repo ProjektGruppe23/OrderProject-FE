@@ -15,6 +15,9 @@ export function populateTable(orders)
         const dateCell = row.insertCell();
         dateCell.textContent = order.date ? order.date.date : "";
 
+        const orderNumberCell = row.insertCell();
+        orderNumberCell.textContent = order.costumerAddress ? order.costumerAddress.costumerAddressId : "";
+
         const productNameCell = row.insertCell();
         productNameCell.textContent = order.productName;
 

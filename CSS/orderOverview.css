@@ -26,7 +26,7 @@ body {
 }
 
 #orderTable thead tr {
-    background-color: #009879;
+    background-color: rgba(72, 4, 87, 0.91);
     color: #ffffff;
     text-align: center;
     margin: 1%;
@@ -49,12 +49,12 @@ body {
 }
 
 #orderTable tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #480457E8;
 }
 
-#btnDeleteOrder, #btnShipping {
+#btnDeleteOrder, #btnShipping, .copy-btn {
     transition: transform 0.1s ease-in-out;
-    background-color: #009879;
+    background-color: #480457E8;
     border-radius: 5px;
     color: #ffffff;
     border: none;
@@ -63,14 +63,14 @@ body {
     margin: 1%;
 }
 
-#btnDeleteOrder:hover {
-    background-color: #009879;
+#btnDeleteOrder:hover, #btnShipping:hover, .copy-btn:hover {
+    background-color: #480457E8;
     transition: 0.1s ease-in-out;
     transform: scale(1.1);
     opacity: 0.8;
     color: #ffffff;
     cursor: pointer;
-    border: 1px solid #009879;
+    border: 1px solid #480457E8;
 }
 
 .top-table-button {
@@ -78,13 +78,13 @@ body {
     text-decoration: none;
     color: #ffffff;
     background-color: white;
-    border: 1px solid #009879;
+    border: 1px solid #480457E8;
 }
 
 #addOrdersButton
 {
     transition: transform 0.1s ease-in-out;
-    background-color: #009879;
+    background-color: #480457E8;
     border-radius: 25px;
     color: #ffffff;
     border: none;
@@ -96,13 +96,13 @@ body {
 }
 
 #addOrdersButton:hover {
-    background-color: #009879;
+    background-color: rgba(72, 4, 87, 0.75);
     transition: 0.1s ease-in-out;
     transform: scale(1.1);
     opacity: 0.8;
     color: #ffffff;
     cursor: pointer;
-    border: 1px solid #009879;
+    border: 1px solid rgba(72, 4, 87, 0.68);
 }
 
 .shipping-details-dropdown {
@@ -131,7 +131,5 @@ body {
     margin-left: 10px; /* Adjust the margin as needed */
 }
 
-.copy-btn {
-    margin-right: 10px;
-}
+
 
