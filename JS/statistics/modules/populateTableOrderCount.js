@@ -32,6 +32,6 @@ export async function populateTable()
         row.insertCell().textContent = productName;
         row.insertCell().textContent = count;
         row.insertCell().textContent = vendorName;
-        row.insertCell().textContent = `$${income.toFixed(2)}`;  // Format income as currency
+        row.insertCell().textContent = `€${income.toFixed(2)}`;  // Format income as currency
     });
 }
