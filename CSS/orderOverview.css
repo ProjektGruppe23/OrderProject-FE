@@ -85,7 +85,7 @@ body {
 {
     transition: transform 0.1s ease-in-out;
     background-color: #480457E8;
-    border-radius: 25px;
+    border-radius: 10px;
     color: #ffffff;
     border: none;
     padding: 10px 15px;

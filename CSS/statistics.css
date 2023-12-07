@@ -51,8 +51,7 @@
 .highlights
 {
     cursor: default;
-    background-color: darkblue;
-    opacity: 70%;
+    background-color: #480457E8;
     font-family: "Mongolian Baiti" ,serif;
     border-radius: 10px;
     color: #ffffff;
@@ -109,10 +108,10 @@
 #return
 {
     cursor: pointer;
-    background-color: darkblue;
-    opacity: 70%;
+    background-color: #480457E8;
+    opacity: 90%;
     font-family: "Mongolian Baiti" ,serif;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #ffffff;
     border: none;
     padding: 5px 20px 5px 20px;
