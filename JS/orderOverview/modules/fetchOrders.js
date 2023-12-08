@@ -13,18 +13,12 @@ export async function fetchOrders(input1, input2) {
 
         if(response1.ok && response2.ok)
         {
-            console.log('Orders fetched successfully');
-            alert("Orders fetched successfully, the site will now reload to show the updated orderlist. Click OK to continue");
+            console.log('Orders fetched \n successfully');
         }
-        else if (!response1.ok)
+        else if (!response1.ok || !response2.ok)
         {
-            console.log('Failed to fetch orders from reverb');
-            alert("Failed to fetch orders from reverb" + response1.status);
-        }
-        else if (!response2.ok)
-        {
-            console.log('Failed to fetch orders from shopify');
-            alert("Failed to fetch orders from shopify");
+            console.log("Failed to fetch orders" + "reverb info: " + response1.status + "; Shopify info: " + response2.status);
+            alert("Failed to fetch orders. \n" + "reverb info: " + response1.status + "; Shopify info: " + response2.status);
         }
 
         return [response1, response2];
