@@ -6,11 +6,9 @@ import { fetchAndDisplayShippingDetails } from "./fetchShippingDetails.js";
 export function populateTable(orders)
 {
     orders.sort((a, b) => {
-        // Convert date strings to Date objects for comparison
         let dateA = new Date(a.date.date);
         let dateB = new Date(b.date.date);
 
-        // Sort in ascending order of date
         return dateA - dateB;
     });
 
